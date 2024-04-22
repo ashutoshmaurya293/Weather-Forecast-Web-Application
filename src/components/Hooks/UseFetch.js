@@ -5,7 +5,7 @@ const UseFetch = (url) => {
     const [Data, setData] = useState()
   useEffect(() => {
     axios.get(url).then((res)=>{
-        setData(res?.data.results)
+        setData(res)
     })
     
   }, [url])

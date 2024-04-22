@@ -1,13 +1,12 @@
-import './App.css'
-import City from './components/City/City'
+import "./App.css";
+import AllRouts from "./components/AllRouts/AllRouts";
 
 function App() {
-
   return (
     <>
-    <City/>
+      <AllRouts />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

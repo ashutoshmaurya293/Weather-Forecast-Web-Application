@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import UseFetch from "../Hooks/UseFetch";
 import { Link, NavLink } from "react-router-dom";
+import Loader from "../loaders/Loader";
 
 const City = () => {
-  const { Data } = UseFetch(
+  const { Data ,Loading} = UseFetch(
     "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-all-cities-with-a-population-1000/records?limit=100&refine=cou_name_en%3A%22India%22"
   );
   const [InputCity, setInputCity] = useState("");
@@ -21,7 +22,9 @@ const City = () => {
   // console.log(Data);
   return (
     <>
-      <Container>
+    {Loading?
+  <Loader/>: 
+  <Container>
         <Title>Weather Forecast Web Application</Title>
         <Input
           placeholder="search city ..."
@@ -50,7 +53,9 @@ const City = () => {
             </NavLink>
           ))}
         </ResponsiveTable>
-      </Container>
+      </Container> 
+  }
+      
     </>
   );
 };

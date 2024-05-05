@@ -40,10 +40,10 @@ const City = () => {
           {FilterCity?.map((e, i) => (
             <NavLink to={`/weather/${e.name}`} key={i}>
               <TableRow>
-                <TableColumn width="30%" data-label="Job Id">
+                <TableColumn width="40%" data-label="Job Id">
                   {e.name}
                 </TableColumn>
-                <TableColumn width="40%" data-label="Customer Name">
+                <TableColumn width="30%" data-label="Customer Name">
                   {e.cou_name_en}
                 </TableColumn>
                 <TableColumn width="20%" data-label="Amount">
